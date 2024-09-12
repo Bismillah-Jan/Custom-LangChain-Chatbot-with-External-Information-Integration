@@ -1,6 +1,6 @@
 # Building and Debugging a Custom LangChain Chatbot with External Information Integration
 
-## Key take aways
+## Key takeaways
 * Create a chatbot using LangChain’s Chat Model
 * Use Prompt Template, and Output Parser to organize the output and see only the text
 * Learn how is chain implement in `LangChain`
