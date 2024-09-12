@@ -78,47 +78,6 @@ llm2.invoke({"query":"What is your name?"})
 
 ```
 
-    Requirement already satisfied: pip in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (22.2.2)
-    Collecting pip
-      Downloading pip-24.2-py3-none-any.whl (1.8 MB)
-    [2K     [90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[0m [32m1.8/1.8 MB[0m [31m358.6 kB/s[0m eta [36m0:00:00[0m00:01[0m00:01[0m
-    [?25hInstalling collected packages: pip
-      Attempting uninstall: pip
-        Found existing installation: pip 22.2.2
-        Uninstalling pip-22.2.2:
-          Successfully uninstalled pip-22.2.2
-    Successfully installed pip-24.2
-    Requirement already satisfied: datasets in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (3.0.0)
-    Requirement already satisfied: filelock in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (3.6.0)
-    Requirement already satisfied: numpy>=1.17 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (1.21.5)
-    Requirement already satisfied: pyarrow>=15.0.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (17.0.0)
-    Requirement already satisfied: dill<0.3.9,>=0.3.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (0.3.8)
-    Requirement already satisfied: pandas in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (1.4.4)
-    Requirement already satisfied: requests>=2.32.2 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (2.32.3)
-    Requirement already satisfied: tqdm>=4.66.3 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (4.66.5)
-    Requirement already satisfied: xxhash in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (3.5.0)
-    Requirement already satisfied: multiprocess in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (0.70.16)
-    Requirement already satisfied: fsspec<=2024.6.1,>=2023.1.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from fsspec[http]<=2024.6.1,>=2023.1.0->datasets) (2024.6.1)
-    Requirement already satisfied: aiohttp in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (3.10.5)
-    Requirement already satisfied: huggingface-hub>=0.22.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (0.24.6)
-    Requirement already satisfied: packaging in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (24.1)
-    Requirement already satisfied: pyyaml>=5.1 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from datasets) (6.0)
-    Requirement already satisfied: aiohappyeyeballs>=2.3.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from aiohttp->datasets) (2.4.0)
-    Requirement already satisfied: aiosignal>=1.1.2 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from aiohttp->datasets) (1.3.1)
-    Requirement already satisfied: attrs>=17.3.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from aiohttp->datasets) (21.4.0)
-    Requirement already satisfied: frozenlist>=1.1.1 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from aiohttp->datasets) (1.4.1)
-    Requirement already satisfied: multidict<7.0,>=4.5 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from aiohttp->datasets) (6.1.0)
-    Requirement already satisfied: yarl<2.0,>=1.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from aiohttp->datasets) (1.11.1)
-    Requirement already satisfied: async-timeout<5.0,>=4.0 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from aiohttp->datasets) (4.0.3)
-    Requirement already satisfied: typing-extensions>=3.7.4.3 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from huggingface-hub>=0.22.0->datasets) (4.12.2)
-    Requirement already satisfied: charset-normalizer<4,>=2 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from requests>=2.32.2->datasets) (2.0.4)
-    Requirement already satisfied: idna<4,>=2.5 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from requests>=2.32.2->datasets) (3.3)
-    Requirement already satisfied: urllib3<3,>=1.21.1 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from requests>=2.32.2->datasets) (1.26.11)
-    Requirement already satisfied: certifi>=2017.4.17 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from requests>=2.32.2->datasets) (2024.2.2)
-    Requirement already satisfied: python-dateutil>=2.8.1 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from pandas->datasets) (2.8.2)
-    Requirement already satisfied: pytz>=2020.1 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from pandas->datasets) (2022.1)
-    Requirement already satisfied: six>=1.5 in /Users/Bismillah/opt/anaconda3/lib/python3.9/site-packages (from python-dateutil>=2.8.1->pandas->datasets) (1.16.0)
-
 
 # Implementing RAG with Claude model
 The Retrieval Augmented Generation (RAG), is a technique in which external (private) data is provided to the LLM for analysis and answering relevant user queries to the data. Following is a simple example of the RAG, in which we provide the IMDB data to the model and ask different questions that can only be answered from the provided data. Let's see how it works:
